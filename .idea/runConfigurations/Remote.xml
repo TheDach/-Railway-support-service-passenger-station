@@ -1,0 +1,72 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Remote" type="TomeeConfiguration" factoryName="Remote" editBeforeRun="true" APPLICATION_SERVER_NAME="TomEE 10.1.34" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="HOST" value="25.17.95.231" />
+    <option name="LOCAL" value="false" />
+    <option name="OPEN_IN_BROWSER_URL" value="http://25.17.95.231:8080/ServletApplication\target\ServletApplication-1.0-SNAPSHOT" />
+    <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
+    <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+    <deployment>
+      <file path="$PROJECT_DIR$/target/ServletApplication-1.0-SNAPSHOT.war">
+        <settings>
+          <option name="CONTEXT_PATH" value="/ServletApplication_1_0_SNAPSHOT_war" />
+        </settings>
+      </file>
+    </deployment>
+    <server-settings>
+      <data>
+        <option name="targets">
+          <list>
+            <WatchedTargetModelImpl>
+              <option name="name" value="CONTEXT_XML" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="86dfa4e8-b41e-4220-9305-9ff5a46eee4a" />
+                  <id>86dfa4e8-b41e-4220-9305-9ff5a46eee4a</id>
+                </TransportTarget>
+              </option>
+              <option name="watchedLocalPath" value="" />
+              <watched-path />
+              <name>CONTEXT_XML</name>
+              <transport-target>
+                <TransportTarget>
+                  <option name="id" value="86dfa4e8-b41e-4220-9305-9ff5a46eee4a" />
+                  <id>86dfa4e8-b41e-4220-9305-9ff5a46eee4a</id>
+                </TransportTarget>
+              </transport-target>
+            </WatchedTargetModelImpl>
+            <StagingTargetModelImpl>
+              <option name="name" value="STAGING" />
+              <option name="stagingRemotePath" value="" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="1ea9cdb9-e00c-41f1-b204-ffff1e15d41b" />
+                  <id>1ea9cdb9-e00c-41f1-b204-ffff1e15d41b</id>
+                </TransportTarget>
+              </option>
+              <staging-path />
+              <name>STAGING</name>
+              <transport-target>
+                <TransportTarget>
+                  <option name="id" value="1ea9cdb9-e00c-41f1-b204-ffff1e15d41b" />
+                  <id>1ea9cdb9-e00c-41f1-b204-ffff1e15d41b</id>
+                </TransportTarget>
+              </transport-target>
+            </StagingTargetModelImpl>
+          </list>
+        </option>
+        <option name="transportHostId" />
+        <host-id />
+      </data>
+    </server-settings>
+    <predefined_log_file enabled="true" id="Tomcat" />
+    <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="55186" />
+      <option name="LOCAL" value="false" />
+    </RunnerSettings>
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="BuildArtifacts" enabled="false" />
+    </method>
+  </configuration>
+</component>

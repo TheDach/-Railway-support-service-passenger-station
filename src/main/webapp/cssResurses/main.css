@@ -1,0 +1,184 @@
+/* Стили для заднего фона */
+body {
+    background: linear-gradient(to bottom, #ffcccb, #bcbbbb);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*!* Контейнер для таблицы *!*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для модальных окон */
+.modal {
+    display: none; /* Скрывает модальное окно по умолчанию */
+    position: fixed; /* Фиксирует модальное окно на экране, чтобы оно не прокручивалось с содержимым */
+    z-index: 1; /* Устанавливает уровень наложения, чтобы модальное окно отображалось поверх других элементов */
+    left: 0; /* Устанавливает модальное окно в левый край экрана */
+    top: 0; /* Устанавливает модальное окно в верхний край экрана */
+    width: 100%; /* Задает ширину модального окна на 100% от ширины экрана */
+    height: 100%; /* Задает высоту модального окна на 100% от высоты экрана */
+    overflow: auto; /* Позволяет прокручивать содержимое модального окна, если оно превышает его размеры */
+    background-color: rgba(0,0,0,0.4); /* Устанавливает полупрозрачный черный фон для затемнения экрана */
+    padding-top: 60px; /* Добавляет отступ сверху, чтобы содержимое не прилипало к верхней части экрана */
+}
+.modal-content {
+    background-color: #fefefe; /* Устанавливает светлый фон для содержимого модального окна */
+    margin: 5% auto; /* Устанавливает отступ сверху и снизу в 5% и центрирует содержимое по горизонтали */
+    padding: 20px; /* Добавляет внутренние отступы вокруг содержимого модального окна */
+    width: 90%; /* Задает ширину содержимого модального окна на 80% от ширины родительского элемента (модального окна) */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Стиль кнопок */
+button {
+    margin: 0 10px; /* Разделение кнопок */
+    padding: 10px 20px; /* Увеличение области нажатия */
+    font-size: 16px; /* Увеличение размера шрифта */
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50; /* Цвет фона кнопок */
+    color: white; /* Цвет текста кнопок */
+    border-radius: 5px; /* Закругление углов */
+}
+button:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}
+/* Стили для контейнера кнопок */
+.button-container {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    margin-left: 20px; /* Отступ слева */
+
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    padding: 20px; /* Внутренние отступы для формы */
+    border-radius: 8px; /* Закругление углов */
+    width: 300px; /* Ширина формы */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Увеличенное расстояние между группами полей */
+    width: 100%; /* Задаем ширину для групп полей */
+}
+
+.button-group {
+    margin-top: 10px; /* Отступ сверху для кнопок */
+    display: flex; /* Используем flexbox для кнопок */
+    justify-content: space-between; /* Распределяем кнопки по ширине */
+    width: 100%; /* Задаем ширину для группы кнопок */
+}
+
+label {
+    display: block; /* Устанавливаем метки как блочные элементы */
+    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+    font-weight: bold; /* Сделать текст метки жирным */
+    font-size: 16px; /* Увеличение размера шрифта меток */
+    text-align: left; /* Выравнивание текста меток влево */
+}
+
+.large-select {
+    width: 100%; /* Задаем ширину для выпадающего меню */
+    padding: 10px; /* Добавляем внутренние отступы */
+    border: 1px solid #ccc; /* Обводка для выпадающего меню */
+    border-radius: 4px; /* Закругление углов */
+    font-size: 16px; /* Увеличение размера шрифта для выпадающего меню */
+}
+
+.input-field {
+    width: 80%; /* Задаем ширину для полей ввода */
+    padding: 10px; /* Добавляем внутренние отступы */
+    border: 1px solid #ccc; /* Обводка полей ввода */
+    border-radius: 4px; /* Закругление углов */
+    font-size: 16px; /* Увеличение размера шрифта для полей ввода */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+}
+
+
+/* Стили для группы кнопок с закруглением */
+.rounded-button-group {
+    display: flex; /* Используем flexbox для кнопок */
+    justify-content: space-between; /* Распределяем кнопки по ширине */
+    width: auto; /* Задаем ширину для группы кнопок */
+    border-radius: 8px; /* Закругление углов */
+    background-color: rgba(213, 211, 211, 0.8); /* Фон для группы кнопок (можно настроить) */
+    padding: 10px; /* Внутренние отступы для группы кнопок */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для группы кнопок */
+}
+
+
+/* Стили для таблицы */
+table {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse; /* Убирает двойную обводку */
+}
+th, td {
+    border: 1px solid #888; /* Обводка ячеек */
+    padding: 10px;
+    text-align: center; /* Центрирование текста */
+    font-size: 18px; /* Увеличение размера текста */
+}
+thead {
+    background-color: #4CAF50; /* Цвет фона шапки таблицы */
+    color: white; /* Цвет текста в шапке таблицы */
+}
+
+/*  для выделения строки при наведении и нажатии  */
+.selected {
+    background-color: #4CAF50; /* Цвет фона для выделенной строки */
+    color: #ffffff; /* Цвет текста для выделенной строки */
+}
+/* Эффект наведения для строк таблицы */
+#hover_effect tr:hover {
+    background-color: #d8d7d7; /* Цвет фона при наведении */
+    cursor: pointer; /* Изменение курсора на указатель */
+}
+
+/* Стили для скрытой информации */
+.details-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Стили для скрытых строк */
+.details {
+    display: none; /* Скрываем строки по умолчанию */
+}
+
+/* Добавьте стили для всплывающего окна */
+#tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}

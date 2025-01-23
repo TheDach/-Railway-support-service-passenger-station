@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>by.javaguru.servletapplication.Staff</OriginalElement>
+  <nodes>
+    <node x="355.0" y="151.0">jakarta.servlet.annotation.WebServlet</node>
+    <node x="280.0" y="317.79420889348495">by.javaguru.servletapplication.Staff</node>
+    <node x="196.0780765253361" y="428.3071354705273">by.javaguru.servletapplication.Helper</node>
+    <node x="548.0" y="317.79420889348495">by.javaguru.servletapplication.Tickets</node>
+    <node x="512.0" y="101.0">java.io.Serializable</node>
+    <node x="335.0" y="101.0">jakarta.servlet.http.HttpServlet</node>
+    <node x="729.4891416752844" y="317.79420889348495">by.javaguru.servletapplication.Schedules</node>
+    <node x="184.5780765253361" y="476.3071354705273">by.javaguru.servletapplication.Database</node>
+    <node x="151.0" y="-15.0">jakarta.servlet.Servlet</node>
+    <node x="-97.12409513960702" y="317.79420889348495">by.javaguru.servletapplication.BuyNewTicket</node>
+    <node x="413.0" y="317.79420889348495">by.javaguru.servletapplication.Routes</node>
+    <node x="71.0" y="102.0">jakarta.servlet.GenericServlet</node>
+    <node x="218.5" y="33.0">jakarta.servlet.ServletConfig</node>
+    <node x="95.0" y="317.79420889348495">by.javaguru.servletapplication.Passengers</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="by.javaguru.servletapplication.Schedules" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="794.4891416752844" y="141.0" />
+      <point x="320.0" y="141.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Passengers" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="-35.0" y="-14.0" />
+      <point x="130.0" y="201.0" />
+      <point x="279.0" y="201.0" />
+      <point x="279.0" y="141.0" />
+      <point x="320.0" y="141.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Schedules" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="-65.0" y="-0.0" />
+      <point x="525.5" y="331.79420889348495" />
+      <point x="525.5" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="jakarta.servlet.GenericServlet" target="jakarta.servlet.ServletConfig" relationship="REALIZATION">
+      <point x="82.0" y="-7.0" />
+      <point x="250.0" y="109.0" />
+      <point x="250.0" y="76.0" />
+      <point x="296.5" y="76.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Tickets" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="-26.75" y="-14.0" />
+      <point x="574.75" y="211.0" />
+      <point x="518.0" y="211.0" />
+      <point x="518.0" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="jakarta.servlet.GenericServlet" target="jakarta.servlet.Servlet" relationship="REALIZATION">
+      <point x="82.0" y="-7.0" />
+      <point x="250.0" y="109.0" />
+      <point x="250.0" y="76.0" />
+      <point x="203.5" y="76.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Tickets" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="26.75" y="-14.0" />
+      <point x="628.25" y="191.0" />
+      <point x="340.0" y="191.0" />
+      <point x="340.0" y="141.0" />
+      <point x="320.0" y="141.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Routes" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="-26.0" y="-14.0" />
+      <point x="439.0" y="201.0" />
+      <point x="320.0" y="201.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.BuyNewTicket" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="40.5" y="-14.0" />
+      <point x="24.37590486039298" y="211.0" />
+      <point x="518.0" y="211.0" />
+      <point x="518.0" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Passengers" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="35.0" y="-14.0" />
+      <point x="200.0" y="211.0" />
+      <point x="518.0" y="211.0" />
+      <point x="518.0" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Staff" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="22.0" y="-14.0" />
+      <point x="346.0" y="211.0" />
+      <point x="518.0" y="211.0" />
+      <point x="518.0" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Staff" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="-22.0" y="-14.0" />
+      <point x="302.0" y="201.0" />
+      <point x="300.0" y="201.0" />
+      <point x="300.0" y="141.0" />
+      <point x="320.0" y="141.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="jakarta.servlet.http.HttpServlet" target="jakarta.servlet.GenericServlet" relationship="GENERALIZATION">
+      <point x="-73.5" y="-0.0" />
+      <point x="295.0" y="116.0" />
+      <point x="295.0" y="123.0" />
+      <point x="82.0" y="7.0" />
+    </edge>
+    <edge source="jakarta.servlet.GenericServlet" target="java.io.Serializable" relationship="REALIZATION">
+      <point x="82.0" y="-7.0" />
+      <point x="270.0" y="109.0" />
+      <point x="270.0" y="86.0" />
+      <point x="585.5" y="86.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.Routes" target="jakarta.servlet.annotation.WebServlet" relationship="REALIZATION">
+      <point x="26.0" y="-14.0" />
+      <point x="491.0" y="211.0" />
+      <point x="518.0" y="211.0" />
+      <point x="518.0" y="166.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="by.javaguru.servletapplication.BuyNewTicket" target="jakarta.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="-40.5" y="-14.0" />
+      <point x="-56.62409513960702" y="141.0" />
+      <point x="320.0" y="141.0" />
+      <point x="320.0" y="116.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.9917948717948719" showDependencies="false" x="333.9193381592556" y="151.2047569803516" />
+  <SelectedNodes>
+    <node>by.javaguru.servletapplication.Schedules</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

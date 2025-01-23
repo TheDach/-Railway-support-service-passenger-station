@@ -1,0 +1,33 @@
+body {
+    background-color: #b9f1bb; /* Задат цвет фона */
+    margin: 0;
+    height: 100vh; /* Занять всю высоту окна */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    font-family: 'Roboto', sans-serif; /* Выбор шрифта */
+}
+
+.main_button_container {
+    display: flex;
+    flex-direction: column; /* column для вертикального расположения */
+    text-align: center; /* Центрирование текста внутри контейнера */
+}
+
+.main-button {
+    text-decoration: none;
+    background-color: #ffcccb; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 25px; /* Закругление углов */
+    width: 300px;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 18px; /* Размер шрифта */
+    margin: 20px 0; /* Отступы между кнопками */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.main-button:hover {
+    background-color: #90908d; /* Цвет фона при наведении */
+}
