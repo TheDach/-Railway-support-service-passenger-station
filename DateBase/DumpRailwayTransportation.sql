@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `railway_transportation` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `railway_transportation` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `railway_transportation`;
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
 -- Host: localhost    Database: railway_transportation
 -- ------------------------------------------------------
--- Server version	5.5.23
+-- Server version	8.0.43
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `brigades`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `brigades` (
-  `ID_Brigade` int(11) NOT NULL,
+  `ID_Brigade` int NOT NULL,
   PRIMARY KEY (`ID_Brigade`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `passengers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `passengers` (
-  `ID_Passenger` int(11) NOT NULL,
+  `ID_Passenger` int NOT NULL,
   `FIO` varchar(100) DEFAULT NULL,
   `Gender` varchar(5) DEFAULT NULL,
   `Passport` varchar(45) DEFAULT NULL,
@@ -76,9 +76,9 @@ DROP TABLE IF EXISTS `routes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `routes` (
-  `ID_Route` int(11) NOT NULL,
-  `Place_departure` int(11) DEFAULT NULL,
-  `Place_arrival` int(11) DEFAULT NULL,
+  `ID_Route` int NOT NULL,
+  `Place_departure` int DEFAULT NULL,
+  `Place_arrival` int DEFAULT NULL,
   PRIMARY KEY (`ID_Route`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -101,12 +101,14 @@ DROP TABLE IF EXISTS `schedules`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `schedules` (
-  `ID_Race` int(11) NOT NULL,
-  `ID_Train` int(11) DEFAULT NULL,
-  `Route` int(11) DEFAULT NULL,
-  `Brigade` int(11) DEFAULT NULL,
-  `Date_and_time_departure` varchar(45) DEFAULT NULL,
-  `Date_and_time_arrival` varchar(45) DEFAULT NULL,
+  `ID_Race` int NOT NULL,
+  `ID_Train` int DEFAULT NULL,
+  `Route` int DEFAULT NULL,
+  `Brigade` int DEFAULT NULL,
+  `Date_departure` varchar(45) DEFAULT NULL,
+  `Date_arrival` varchar(45) DEFAULT NULL,
+  `Time_departure` varchar(45) DEFAULT NULL,
+  `Time_arrival` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID_Race`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -117,7 +119,7 @@ CREATE TABLE `schedules` (
 
 LOCK TABLES `schedules` WRITE;
 /*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (1,4,1,4,'17.03.2025 07:42','17.03.2025 16:20'),(2,6,10,2,'15.06.2025 11:35','17.06.2025 12:32'),(3,1,8,3,'14.05.2025 13:54','15.05.2025 00:11'),(4,3,6,1,'01.11.2025 07:48','01.11.2025 20:59'),(5,6,9,2,'10.12.2024 22:07','11.12.2024 02:28'),(6,6,5,2,'19.06.2025 05:26','19.06.2025 15:49'),(7,6,2,1,'28.10.2025 01:50','29.10.2025 10:35'),(8,4,7,4,'18.03.2025 16:54','19.03.2025 16:54'),(9,4,10,4,'20.02.2025 01:42','25.02.2025 00:30'),(10,4,9,4,'16.01.2025 00:02','16.01.2025 22:12');
+INSERT INTO `schedules` VALUES (1,4,1,4,'17.03.2025','17.03.2025','07:42','16:20'),(2,6,10,2,'15.06.2025','17.06.2025','11:35','12:32'),(3,1,8,3,'14.05.2025','15.05.2025','13:54','00:11'),(4,3,6,1,'01.11.2025','01.11.2025','07:48','20:59'),(5,6,9,2,'10.12.2024','11.12.2024','22:07','02:28'),(6,6,5,2,'19.06.2025','19.06.2025','05:26','15:49'),(7,6,2,1,'28.10.2025','29.10.2025','01:50','10:35'),(8,4,7,4,'18.03.2025','19.03.2025','16:54','16:54'),(9,4,10,4,'20.02.2025','25.02.2025','01:42','00:30'),(10,4,9,4,'16.01.2025','16.01.2025','00:02','22:12');
 /*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -129,7 +131,7 @@ DROP TABLE IF EXISTS `staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `staff` (
-  `ID_Staff` int(11) NOT NULL,
+  `ID_Staff` int NOT NULL,
   `Name` varchar(45) DEFAULT NULL,
   `Surname` varchar(45) DEFAULT NULL,
   `Post` varchar(45) DEFAULT NULL,
@@ -156,7 +158,7 @@ DROP TABLE IF EXISTS `stations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stations` (
-  `ID_Station` int(11) NOT NULL,
+  `ID_Station` int NOT NULL,
   `Name_station` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID_Station`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -180,14 +182,14 @@ DROP TABLE IF EXISTS `tickets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tickets` (
-  `Ticket number` int(11) NOT NULL,
-  `Railway_carriage` int(11) DEFAULT NULL,
-  `Place` int(11) DEFAULT NULL,
-  `Passenger` int(11) DEFAULT NULL,
-  `Route` varchar(45) DEFAULT NULL,
+  `Ticket_number` int NOT NULL,
+  `Railway_carriage` int DEFAULT NULL,
+  `Place` int DEFAULT NULL,
+  `Passenger` int DEFAULT NULL,
+  `Race` varchar(45) DEFAULT NULL,
   `Price` decimal(15,2) DEFAULT NULL,
   `Type_carriage` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`Ticket number`)
+  PRIMARY KEY (`Ticket_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -209,12 +211,12 @@ DROP TABLE IF EXISTS `trains`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `trains` (
-  `ID_Train` int(11) NOT NULL,
+  `ID_Train` int NOT NULL,
   `Name` varchar(45) DEFAULT NULL,
   `Type` varchar(45) DEFAULT NULL,
   `Number_wagons` varchar(45) DEFAULT NULL,
-  `Speed_Km/h` int(11) DEFAULT NULL,
-  `Thrust_force_kN` int(11) DEFAULT NULL,
+  `Speed_Km/h` int DEFAULT NULL,
+  `Thrust_force_kN` int DEFAULT NULL,
   PRIMARY KEY (`ID_Train`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -238,4 +240,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-07 20:50:48
+-- Dump completed on 2025-10-21  1:54:50
